@@ -14,13 +14,10 @@ Create Role:
 
 ```sql
 CREATE ROLE db_user WITH LOGIN PASSWORD 'dbpassword';
+ALTER ROLE db_user CREATEDB;
 ```
 
 Connect Role:
-
-```sql
-\c db_user;
-```
 
 ```zsh
 psql -d postgres -U db_user
@@ -40,4 +37,36 @@ Connect to Database:
 
 ```zsh
 psql -d db_1 -U db_user
+```
+
+Create Table:
+
+```sql
+CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(30));
+```
+
+More tools:
+
+```sql
+INSERT
+SELECT
+ALTER
+UPDATE
+DELETE
+DROP
+```
+
+```sql
+FROM
+WHERE
+INTO
+VALUES
+AS
+OR
+AND
+```
+
+```sql
+DATABASE
+TABLE
 ```
